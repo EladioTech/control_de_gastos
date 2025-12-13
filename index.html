@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control de Gastos - Aerografía79</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>📉 Control de Gastos</h1>
+
+    <div class="form-container">
+      <input type="date" id="fecha" />
+
+      <select id="categoria">
+        <option value="" disabled selected>📦 Categoría</option>
+        <option>Gasolina</option>
+        <option>Luz</option>
+        <option>Agua</option>
+        <option>Internet</option>
+        <option>Cuota Autónomos</option>
+        <option>Herramientas</option>
+        <option>Mantenimiento</option>
+        <option>Publicidad</option>
+        <option>Software</option>
+        <option>Otros</option>
+      </select>
+
+      <input
+        type="number"
+        id="importe"
+        placeholder="💶 Importe (€)"
+        step="0.01"
+      />
+
+      <select id="metodo">
+        <option value="" disabled selected>💳 Método de Pago</option>
+        <option>Efectivo</option>
+        <option>Tarjeta</option>
+        <option>Bizum</option>
+        <option>Transferencia</option>
+        <option>Domiciliado</option>
+      </select>
+
+      <select id="tipoGasto">
+        <option value="" disabled selected>🏷️ Tipo de gasto</option>
+        <option>Fijo</option>
+        <option>Variable</option>
+      </select>
+
+      <select id="estado">
+        <option value="" disabled selected>💡 Estado</option>
+        <option>Pagado</option>
+        <option>Pendiente</option>
+      </select>
+
+      <textarea id="descripcion" placeholder="📝 Descripción..."></textarea>
+
+      <div class="botones">
+        <button id="agregar">➕ Añadir gasto</button>
+        <button id="exportarPDF">📄 Exportar PDF</button>
+        <button id="btnExport">💾 Exportar JSON</button>
+        <button id="btnImport">📂 Importar JSON</button>
+        <input type="file" id="fileInput" accept="application/json" hidden />
+      </div>
+    </div>
+
+    <h2>📊 Resumen</h2>
+    <div id="resumen">
+      <p>Total mensual: <span id="totalMes">0 €</span></p>
+      <p>Total anual: <span id="totalAno">0 €</span></p>
+    </div>
+
+    <ul id="lista-gastos"></ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
