@@ -1,0 +1,9 @@
+# Datos sensibles
+*.json
+
+# Configuración del editor
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
